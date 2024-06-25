@@ -1,0 +1,91 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido %}
+
+<div class="row column3">
+
+   <div class="col-md-6 offset-md-3">
+      <div class="dash_blog">
+         <div class="dash_blog_inner">
+            <div class="dash_head">
+               <h3><span><i class="fa fa-users"></i> Empleados</span></h3>
+            </div>
+            <div class="row">
+               <div class="col-md-12 p-5">
+                  <br>
+                  <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>RUT</th>
+                            <th>NOMBRE</th>
+                            <th>APELLIDO</th>
+                            <th>TIPO</th>
+                            <th>OPCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for aux in lista %}
+                            <tr>
+                                <td>{{ aux.rut }}</td>
+                                <td>{{ aux.nombre }}</td>
+                                <td>{{ aux.apellido }}</td>
+                                <td>{{ aux.tipo }}</td>
+                                <td>
+                                 <a class="btn btn-warning" href="{% url 'empleadosupdate' aux.id %}">Modificar</a>
+                                 <a class="btn btn-danger" onclick="confirmarDelete({{aux.id}})" >Eliminar</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                  </table>
+
+                  
+                    
+                  
+
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="dash_blog">
+         <div class="dash_blog_inner">
+            <div class="dash_head">
+               <h3><span><i class="fa fa-comments-o"></i> Updates</span><span class="plus_green_bt"><a href="#">+</a></span></h3>
+            </div>
+            <div class="list_cont">
+               <p>User confirmation</p>
+            </div>
+            <div class="msg_list_main">
+               <ul class="msg_list">
+                  {% for aux in lista %}
+                  <li>
+                     {% if aux.imagen  %}
+                     <span><img src="{{ aux.imagen.url }}" class="img-responsive" alt="#"></span>
+                     {% else %}
+                     <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqJ64OjHJ2GXpTZqsuJAVI3Epg3WqQUZFE9eGt-Tj4sw&s" class="img-responsive" alt="#"></span>
+                     {% endif %}
+                     <span>
+                     <span class="name_user">{{ aux.nombre }}</span>
+                     <span class="msg_user">{{ aux.tipo }}</span>
+                     <span class="time_ago">{{ aux.rut }}</span>
+                     </span>
+                  </li>
+                  {% endfor %}
+               </ul>
+            </div>
+            <div class="read_more">
+               <div class="center"><a class="main_bt read_bt" href="#">Read More</a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</div>
+
+{% endblock %}
+
+{% block js %}
+
+
+{% endblock %}

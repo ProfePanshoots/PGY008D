@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<!-- Mirrored from themewagon.github.io/pluto/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Apr 2024 13:04:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Pluto - Responsive Bootstrap Admin Panel Templates</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icon -->
+      <link rel="icon" href="images/fevicon.html" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}" />
+      <!-- site css -->
+      <link rel="stylesheet" href="{% static 'core/style.css' %}" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="{% static 'core/css/responsive.css' %}" />
+      <!-- color css -->
+      <link rel="stylesheet" href="{% static 'core/css/colors.html' %}" />
+      <!-- select bootstrap -->
+      <link rel="stylesheet" href="{% static 'core/css/bootstrap-select.css' %}" />
+      <!-- scrollbar css -->
+      <link rel="stylesheet" href="{% static 'core/css/perfect-scrollbar.css' %}" />
+      <!-- custom css -->
+      <link rel="stylesheet" href="{% static 'core/css/custom.css' %}" />
+      <!-- calendar file css -->
+      <link rel="stylesheet" href="{% static 'core/js/semantic.min.html' %}" />
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body class="inner_page login">
+      <div class="full_container">
+         <div class="container">
+            <div class="center verticle_center full_height">
+               <div class="login_section">
+                  <div class="logo_login">
+                     <div class="center">
+                        <img width="210" src="{% static 'core/images/logo/logo.png' %}" alt="#" />
+                     </div>
+                  </div>
+                  <div class="login_form">
+                    {% load crispy_forms_tags %}
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{ form | crispy }}
+                        <input type="submit" value="Login" class="btn btn-success mt-3 float-right">
+                    </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- jQuery -->
+      <script src="{% static 'core/js/jquery.min.js' %}"></script>
+      <script src="{% static 'core/js/popper.min.js' %}"></script>
+      <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+      <!-- wow animation -->
+      <script src="{% static 'core/js/animate.js' %}"></script>
+      <!-- select country -->
+      <script src="{% static 'core/js/bootstrap-select.js' %}"></script>
+      <!-- nice scrollbar -->
+      <script src="{% static 'core/js/perfect-scrollbar.min.js' %}"></script>
+      <script>
+         var ps = new PerfectScrollbar('#sidebar');
+      </script>
+      <!-- custom js -->
+      <script src="{% static 'core/js/custom.js' %}"></script>
+   </body>
+
+<!-- Mirrored from themewagon.github.io/pluto/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Apr 2024 13:04:28 GMT -->
+</html>
+

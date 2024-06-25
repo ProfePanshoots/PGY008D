@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido %}
+
+
+<div class="row column3">
+
+   <div class="col-md-6 offset-md-3">
+      <div class="dash_blog">
+         <div class="dash_blog_inner">
+            <div class="dash_head">
+               <h3><span><i class="fa fa-users"></i> Empleados</span></h3>
+            </div>
+            <div class="row">
+               <div class="col-md-12 m-5">
+                  <h1>Resultado: {{ resultado }} </h1>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</div>
+
+{% endblock %}
+
+{% block js %}
+<!-- <script>
+   const Toast = Swal.mixin({
+  toast: true,
+  position: "top-end",
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.onmouseenter = Swal.stopTimer;
+    toast.onmouseleave = Swal.resumeTimer;
+  }
+});
+Toast.fire({
+  icon: "success",
+  title: "Resultado: {{resultado}}"
+});
+</script> -->
+{% endblock %}
